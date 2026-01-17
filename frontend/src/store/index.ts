@@ -1,25 +1,25 @@
-import { reactive, watch } from 'vue'
+import { reactive } from 'vue'
 import type { TimeLog } from '../types'
 
 const STORAGE_KEY = 'ochronos_data'
 
 export const store = reactive({
-    // Daten
     logs: JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]') as TimeLog[],
     activeProject: 'oChronos Branding',
 
-    // Berechnungen für das Dashboard
-    get todayTotalMs() {
-        const today = new Date().toLocaleDateString()
+    get todayTotalMs(): number {
+        // Wir stellen sicher, dass 'today' immer ein String ist
+        const datePart = new Date().toLocaleDateString().split(',')[0]
+        const today: string = datePart || ''
+
         return this.logs
-            .filter((log) => {
-                // Wir prüfen, ob der Zeitstempel des Logs den heutigen Tag enthält
-                return log.date.includes(today.split(',')[0])
+            .filter((log: TimeLog) => {
+                // Zusätzlicher Check, falls log.date mal fehlt
+                return log.date && log.date.includes(today)
             })
-            .reduce((sum, log) => sum + log.durationMs, 0)
+            .reduce((sum: number, log: TimeLog) => sum + log.durationMs, 0)
     },
 
-    // Aktionen
     addLog(log: TimeLog) {
         this.logs.unshift(log)
         this.save()

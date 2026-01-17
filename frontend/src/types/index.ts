@@ -4,4 +4,5 @@ export interface TimeLog {
     durationMs: number
     formattedTime: string
     date: string
+    project: string
 }
