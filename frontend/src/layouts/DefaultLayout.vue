@@ -6,19 +6,29 @@
 <template>
     <div class="ocLayout">
         <TheHeader />
+
         <main class="ocMain">
-            <slot />
+            <Transition
+                name="fade"
+                mode="out-in">
+                <slot />
+            </Transition>
         </main>
+
         <TheBottomNav class="ocMobileOnly" />
     </div>
 </template>
 
 <style lang="scss">
     @import '../assets/scss/main';
+    // Einfache Transition für Seitenwechsel
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity 0.2s ease;
+    }
 
-    .ocMobileOnly {
-        @media (min-width: 768px) {
-            display: none !important;
-        }
+    .fade-enter-from,
+    .fade-leave-to {
+        opacity: 0;
     }
 </style>

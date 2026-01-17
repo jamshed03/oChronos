@@ -9,8 +9,15 @@
                 <span class="ocBottomNav__label">Projects</span>
             </RouterLink>
 
+            <div class="ocBottomNav__item">
+                <i class="fas fa-chart-pie"></i>
+                <span class="ocBottomNav__label">Insights</span>
+            </div>
+
             <div class="ocBottomNav__fab-wrap">
-                <button class="ocBottomNav__fab">
+                <button
+                    class="ocBottomNav__fab"
+                    @click="$emit('add-task')">
                     <i class="fas fa-plus"></i>
                 </button>
             </div>
@@ -22,6 +29,11 @@
                 <i class="fas fa-stopwatch"></i>
                 <span class="ocBottomNav__label">Timer</span>
             </RouterLink>
+
+            <div class="ocBottomNav__item">
+                <i class="fas fa-cog"></i>
+                <span class="ocBottomNav__label">Settings</span>
+            </div>
         </div>
     </nav>
 </template>

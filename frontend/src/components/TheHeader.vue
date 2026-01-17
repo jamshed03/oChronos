@@ -1,12 +1,14 @@
 <template>
     <header class="ocHeader">
         <div class="ocHeader__container">
-            <div class="ocHeader__brand">
+            <RouterLink
+                to="/"
+                class="ocHeader__brand">
                 <div class="ocHeader__logo-box">
                     <i class="fas fa-stopwatch"></i>
                 </div>
                 <h2 class="ocHeader__title">oChronos</h2>
-            </div>
+            </RouterLink>
 
             <nav class="ocHeader__nav">
                 <RouterLink
@@ -19,18 +21,22 @@
                     class="ocHeader__link">
                     Projects
                 </RouterLink>
-                <a
-                    href="#"
+                <RouterLink
+                    to="/reports"
                     class="ocHeader__link">
                     Reports
-                </a>
+                </RouterLink>
             </nav>
 
             <div class="ocHeader__actions">
-                <button class="ocHeader__icon-btn">
+                <button
+                    class="ocHeader__icon-btn"
+                    title="Notifications">
                     <i class="fas fa-bell"></i>
                 </button>
-                <div class="ocHeader__avatar">
+                <div
+                    class="ocHeader__avatar"
+                    title="Profile">
                     <i class="fas fa-user"></i>
                 </div>
             </div>
