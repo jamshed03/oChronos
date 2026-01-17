@@ -38,7 +38,7 @@
     &__logo-box {
         width: 36px;
         height: 36px;
-        background: linear-gradient(135deg, $oc-primary, darken($oc-primary, 10%));
+        background: linear-gradient(135deg, $oc-primary, rgba($oc-primary, 10%));
         border-radius: 10px; // Etwas runder
         color: white;
         display: flex;
@@ -116,7 +116,7 @@
         transition: all 0.2s;
 
         &:hover {
-            background: darken($oc-surface, 3%);
+            background: rgba($oc-surface, 3%);
             color: $oc-text;
         }
     }

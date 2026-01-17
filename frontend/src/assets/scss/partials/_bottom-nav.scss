@@ -70,7 +70,7 @@
     &__fab {
         width: 58px;
         height: 58px;
-        background: linear-gradient(135deg, $oc-primary, darken($oc-primary, 8%));
+        background: linear-gradient(135deg, $oc-primary, rgba($oc-primary, 8%));
         border: none;
         border-radius: 50%;
         color: white;
