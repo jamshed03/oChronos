@@ -1,15 +1,15 @@
-import { createWebHistory, createRouter } from 'vue-router'
+import { createWebHashHistory, createRouter } from 'vue-router'
 
 import Home from '../pages/Home.vue'
 import GesamteZeit from '../pages/ListOfTimes.vue'
 
 const routes = [
     { path: '/', component: Home },
-    { path: '/list-of-times', component: GesamteZeit },
+    { path: '/list', component: GesamteZeit },
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 })
 
