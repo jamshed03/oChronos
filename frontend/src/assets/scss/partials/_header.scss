@@ -3,17 +3,17 @@
 .ocHeader {
     position: sticky;
     top: 0;
-    z-index: 1000; // Höherer Index für Overlays
-    background: rgba($oc-bg, 0.75); // Etwas transparenter für besseren Blur
-    backdrop-filter: blur(20px) saturate(180%); // Verstärkter iOS-Effekt
+    z-index: 1000;
+    background: rgba($oc-bg, 0.75);
+    backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba($oc-text, 0.05); // Subtilere Linie
+    border-bottom: 1px solid rgba($oc-text, 0.05);
     transition: all 0.3s ease;
 
     &__container {
         max-width: $desktop;
         margin: 0 auto;
-        padding: 0.75rem 1.5rem; // Schmaler für eleganteren Look
+        padding: 0.75rem 1.5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -39,7 +39,7 @@
         width: 36px;
         height: 36px;
         background: linear-gradient(135deg, $oc-primary, rgba($oc-primary, 10%));
-        border-radius: 10px; // Etwas runder
+        border-radius: 10px;
         color: white;
         display: flex;
         align-items: center;
@@ -62,7 +62,7 @@
         display: none;
         @media (min-width: $tablet) {
             display: flex;
-            gap: 2.5rem; // Mehr Platz für Laptop
+            gap: 2.5rem;
         }
     }
 
@@ -103,7 +103,7 @@
     }
 
     &__icon-btn {
-        background: $oc-surface; // Dezent grauer Hintergrund
+        background: $oc-surface;
         border: none;
         color: $oc-muted;
         width: 38px;
