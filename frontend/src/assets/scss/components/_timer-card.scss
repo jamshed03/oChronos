@@ -1,0 +1,67 @@
+@use '../includes/variables' as *;
+
+.ocTimerCard {
+    background: white;
+    border-radius: 32px;
+    padding: 2.5rem;
+    box-shadow: $oc-shadow;
+    border: 1px solid $oc-border;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    &__display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__box {
+        background: $oc-surface;
+        width: 100px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        border: 1px solid $oc-border;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &--active {
+            background: rgba($oc-primary, 0.05);
+            border-color: rgba($oc-primary, 0.2);
+
+            .ocTimerCard__digit {
+                color: $oc-primary;
+            }
+            .ocTimerCard__label {
+                color: $oc-primary;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__digit {
+        font-family: $font-mono;
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: $oc-text;
+        line-height: 1;
+    }
+
+    &__label {
+        font-size: 9px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $oc-muted;
+        margin-top: 8px;
+    }
+
+    &__sep {
+        font-size: 2.5rem;
+        color: $oc-border;
+        padding-bottom: 2rem;
+    }
+}

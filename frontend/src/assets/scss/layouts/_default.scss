@@ -1,0 +1,13 @@
+@use '../includes/variables' as *;
+
+.ocLayout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.ocMobileOnly {
+    @media (min-width: 768px) {
+        display: none !important;
+    }
+}

@@ -1,0 +1,129 @@
+@use '../includes/variables' as *;
+
+.ocTimerHero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    &__input-wrap {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid $oc-border;
+        padding: 1rem 0;
+        span {
+            color: $oc-primary;
+        }
+        i {
+            color: $oc-primary;
+            margin-right: 15px;
+        }
+    }
+    &__input {
+        border: none;
+        font-size: 1.5rem;
+        width: 100%;
+        outline: none;
+        padding-left: 1rem;
+    }
+    &__btns {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+.ocActivity__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f1f3f2;
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.ocActivity__info {
+    display: flex;
+    flex-direction: column;
+}
+.ocActivity__project {
+    font-size: 0.7rem;
+    color: #6b8076;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.ocDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    gap: 1rem;
+    &__digit {
+        font-family: $font-mono;
+        font-size: 4rem;
+        font-weight: 700;
+        @media (min-width: 768px) {
+            font-size: 7rem;
+        }
+    }
+    &__unit--active {
+        color: $oc-primary;
+    }
+    &__sep {
+        font-size: 3rem;
+        opacity: 0.2;
+        padding-bottom: 1rem;
+    }
+    &__label {
+        display: block;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $oc-muted;
+    }
+}
+
+.ocGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    @media (min-width: 1024px) {
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+.ocCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid $oc-border;
+    box-shadow: $oc-shadow;
+    &__title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.ocBtn {
+    height: 54px;
+    border-radius: 14px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    &--primary {
+        background: $oc-primary;
+        color: white;
+        padding: 0 3rem;
+        font-size: 1.1rem;
+    }
+    &--icon {
+        width: 54px;
+        background: $oc-surface;
+        border: 1px solid $oc-border;
+    }
+}
