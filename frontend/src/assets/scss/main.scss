@@ -1,0 +1,49 @@
+// Variables
+$oc-primary: #42b883;
+$oc-bg: #ffffff;
+$oc-surface: #fafafa;
+$oc-text: #131615;
+$oc-muted: #6b8076;
+$oc-border: #f1f3f2;
+$oc-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+$oc-blur: blur(20px);
+$font-main: 'Manrope', sans-serif;
+$font-mono: 'Space Grotesk', monospace;
+
+// Breakpoints
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1440px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-main;
+    background-color: $oc-bg;
+    color: $oc-text;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ocLayout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.ocMain {
+    flex: 1;
+    width: 100%;
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 1.5rem;
+    padding-bottom: 100px; // Platz für Mobile Nav
+
+    @media (min-width: $tablet) {
+        padding: 3rem;
+        padding-bottom: 3rem;
+    }
+}
